@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F7F843DFCA1BF697EE623E4 /* Pods_CodeatArtAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68F36E6139C7CA74588E892 /* Pods_CodeatArtAssignment.framework */; };
 		922F18E41F5162FB00D0192F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922F18E31F5162FB00D0192F /* AppDelegate.swift */; };
 		922F18E61F5162FB00D0192F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922F18E51F5162FB00D0192F /* ViewController.swift */; };
 		922F18E91F5162FB00D0192F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922F18E71F5162FB00D0192F /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 		922F18F11F5162FB00D0192F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922F18EF1F5162FB00D0192F /* LaunchScreen.storyboard */; };
 		922F18FC1F5162FB00D0192F /* CodeatArtAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922F18FB1F5162FB00D0192F /* CodeatArtAssignmentTests.swift */; };
 		922F19071F5162FB00D0192F /* CodeatArtAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922F19061F5162FB00D0192F /* CodeatArtAssignmentUITests.swift */; };
+		922F19151F517CC100D0192F /* MoviesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922F19141F517CC100D0192F /* MoviesListTableViewCell.swift */; };
+		922F19171F518A1E00D0192F /* MovieListUTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922F19161F518A1E00D0192F /* MovieListUTableViewController.swift */; };
+		922F19191F518A3A00D0192F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922F19181F518A3A00D0192F /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160CC94736008130EC59A673 /* Pods-CodeatArtAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeatArtAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeatArtAssignment/Pods-CodeatArtAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		922F18E01F5162FB00D0192F /* CodeatArtAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeatArtAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922F18E31F5162FB00D0192F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922F18E51F5162FB00D0192F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +54,11 @@
 		922F19021F5162FB00D0192F /* CodeatArtAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeatArtAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		922F19061F5162FB00D0192F /* CodeatArtAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeatArtAssignmentUITests.swift; sourceTree = "<group>"; };
 		922F19081F5162FB00D0192F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922F19141F517CC100D0192F /* MoviesListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesListTableViewCell.swift; sourceTree = "<group>"; };
+		922F19161F518A1E00D0192F /* MovieListUTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListUTableViewController.swift; sourceTree = "<group>"; };
+		922F19181F518A3A00D0192F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		D2C3735C85AA0B672C83C3F5 /* Pods-CodeatArtAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeatArtAssignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeatArtAssignment/Pods-CodeatArtAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		D68F36E6139C7CA74588E892 /* Pods_CodeatArtAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeatArtAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7F843DFCA1BF697EE623E4 /* Pods_CodeatArtAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +94,8 @@
 				922F18FA1F5162FB00D0192F /* CodeatArtAssignmentTests */,
 				922F19051F5162FB00D0192F /* CodeatArtAssignmentUITests */,
 				922F18E11F5162FB00D0192F /* Products */,
+				9C79ABB1BBE38509C5D86281 /* Pods */,
+				E5FAB2C6EA03487C70162ECB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,7 +114,10 @@
 			children = (
 				922F18E31F5162FB00D0192F /* AppDelegate.swift */,
 				922F18E51F5162FB00D0192F /* ViewController.swift */,
+				922F19141F517CC100D0192F /* MoviesListTableViewCell.swift */,
 				922F18E71F5162FB00D0192F /* Main.storyboard */,
+				922F19161F518A1E00D0192F /* MovieListUTableViewController.swift */,
+				922F19181F518A3A00D0192F /* MovieTableViewCell.swift */,
 				922F18ED1F5162FB00D0192F /* Assets.xcassets */,
 				922F18EF1F5162FB00D0192F /* LaunchScreen.storyboard */,
 				922F18F21F5162FB00D0192F /* Info.plist */,
@@ -128,6 +144,23 @@
 			path = CodeatArtAssignmentUITests;
 			sourceTree = "<group>";
 		};
+		9C79ABB1BBE38509C5D86281 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2C3735C85AA0B672C83C3F5 /* Pods-CodeatArtAssignment.debug.xcconfig */,
+				160CC94736008130EC59A673 /* Pods-CodeatArtAssignment.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5FAB2C6EA03487C70162ECB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D68F36E6139C7CA74588E892 /* Pods_CodeatArtAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922F190B1F5162FB00D0192F /* Build configuration list for PBXNativeTarget "CodeatArtAssignment" */;
 			buildPhases = (
+				58CA356A7C08E59245F49F57 /* [CP] Check Pods Manifest.lock */,
 				922F18DC1F5162FB00D0192F /* Sources */,
 				922F18DD1F5162FB00D0192F /* Frameworks */,
 				922F18DE1F5162FB00D0192F /* Resources */,
+				3BE29C48414E3C3227E35833 /* [CP] Embed Pods Frameworks */,
+				3D593A26EFE46AB3894AE8E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,6 +296,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3BE29C48414E3C3227E35833 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeatArtAssignment/Pods-CodeatArtAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D593A26EFE46AB3894AE8E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeatArtAssignment/Pods-CodeatArtAssignment-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58CA356A7C08E59245F49F57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		922F18DC1F5162FB00D0192F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -267,6 +351,9 @@
 			files = (
 				922F18E61F5162FB00D0192F /* ViewController.swift in Sources */,
 				922F18E41F5162FB00D0192F /* AppDelegate.swift in Sources */,
+				922F19191F518A3A00D0192F /* MovieTableViewCell.swift in Sources */,
+				922F19171F518A1E00D0192F /* MovieListUTableViewController.swift in Sources */,
+				922F19151F517CC100D0192F /* MoviesListTableViewCell.swift in Sources */,
 				922F18EC1F5162FB00D0192F /* CodeatArtAssignment.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +506,7 @@
 		};
 		922F190C1F5162FB00D0192F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2C3735C85AA0B672C83C3F5 /* Pods-CodeatArtAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZY3B78M368;
@@ -432,6 +520,7 @@
 		};
 		922F190D1F5162FB00D0192F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 160CC94736008130EC59A673 /* Pods-CodeatArtAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZY3B78M368;
@@ -520,6 +609,7 @@
 				922F190D1F5162FB00D0192F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		922F190E1F5162FB00D0192F /* Build configuration list for PBXNativeTarget "CodeatArtAssignmentTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +618,7 @@
 				922F19101F5162FB00D0192F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		922F19111F5162FB00D0192F /* Build configuration list for PBXNativeTarget "CodeatArtAssignmentUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +627,7 @@
 				922F19131F5162FB00D0192F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

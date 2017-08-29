@@ -54,6 +54,8 @@ class MovieListUTableViewController: UITableViewController {
                     tempDict["overview"] = obj["overview"] as! String
                     if let poster_path = obj["poster_path"] as? String{
                         tempDict["poster_path"] = poster_path
+                    }else{
+                        tempDict["poster_path"] = "N/A"
                     }
                     //tempDict["poster_path"] = obj["poster_path"] as! String
                     tempDict["release_date"] = obj["release_date"] as! String

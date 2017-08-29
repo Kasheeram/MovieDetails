@@ -41,7 +41,7 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
         let scrollViewHeight:CGFloat = self.scrollView.frame.height
         imgOne = UIImageView(frame: CGRect(x:0, y:0,width:scrollViewWidth, height:scrollViewHeight))
         imgTwo = UIImageView(frame: CGRect(x:scrollViewWidth, y:0,width:scrollViewWidth, height:scrollViewHeight))
-        self.scrollView.contentSize = CGSize(width:self.scrollView.frame.width * 2, height:self.scrollView.frame.height)
+        
         self.scrollView.delegate = self
         self.pageControl.currentPage = 0
 
@@ -111,15 +111,20 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
                     self.overViewLabel.text = " "
                 }
                 
-                if let poster_path = readableJSON["poster_path"] as? String{
-                    self.setImages(image:self.imgTwo!,imagename:poster_path)
-                    self.pageControl.numberOfPages = 1
-                }
+                var count = 0.0
                 if let backdrop_path = readableJSON["backdrop_path"] as? String{
                     self.setImages(image:self.imgOne!,imagename:backdrop_path)
+                    self.pageControl.numberOfPages = 1
+                    count = 1.0
+                }
+                if let poster_path = readableJSON["poster_path"] as? String{
+                    self.setImages(image:self.imgTwo!,imagename:poster_path)
                     self.pageControl.numberOfPages += 1
+                    count += 1.0
                 }
                 
+                
+                self.scrollView.contentSize = CGSize(width:self.scrollView.frame.width * CGFloat(count), height:self.scrollView.frame.height)
                 
             }catch{
                 

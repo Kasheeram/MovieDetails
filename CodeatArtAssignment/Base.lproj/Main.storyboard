@@ -199,60 +199,30 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCw-JN-FMw">
                                 <rect key="frame" x="0.0" y="613" width="375" height="54"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unrating" translatesAutoresizingMaskIntoConstraints="NO" id="1cG-yS-0tk">
-                                        <rect key="frame" x="8" y="5" width="36" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="36" id="PBE-a4-1kv"/>
-                                            <constraint firstAttribute="height" constant="36" id="hRj-ZK-Hdv"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unrating" translatesAutoresizingMaskIntoConstraints="NO" id="xMi-mt-eeL">
-                                        <rect key="frame" x="45" y="5" width="36" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="2hm-dX-Re6"/>
-                                            <constraint firstAttribute="width" constant="36" id="vCP-kc-L4S"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unrating" translatesAutoresizingMaskIntoConstraints="NO" id="qcI-wu-vY0">
-                                        <rect key="frame" x="83" y="5" width="36" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="JvU-vy-UWk"/>
-                                            <constraint firstAttribute="width" constant="36" id="uWy-c1-FDD"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unrating" translatesAutoresizingMaskIntoConstraints="NO" id="BKG-eG-70G">
-                                        <rect key="frame" x="121" y="5" width="36" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="36" id="7ou-W8-QqS"/>
-                                            <constraint firstAttribute="height" constant="36" id="pd4-lp-hJD"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unrating" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-La-qZ3">
-                                        <rect key="frame" x="159" y="5" width="36" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="kf7-gr-gNs"/>
-                                            <constraint firstAttribute="width" constant="36" id="lGq-2g-0IX"/>
-                                        </constraints>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vII-CQ-5MG" customClass="HCSStarRatingView">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="54"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="3.2999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="allowsHalfStars" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="accurateHalfStars" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="BKG-eG-70G" secondAttribute="bottom" constant="13" id="4xu-nX-yxO"/>
-                                    <constraint firstAttribute="bottom" secondItem="1cG-yS-0tk" secondAttribute="bottom" constant="13" id="65i-Og-ls2"/>
-                                    <constraint firstItem="P0R-La-qZ3" firstAttribute="top" secondItem="OCw-JN-FMw" secondAttribute="top" constant="5" id="8m2-Fj-CJV"/>
-                                    <constraint firstItem="P0R-La-qZ3" firstAttribute="leading" secondItem="BKG-eG-70G" secondAttribute="trailing" constant="2" id="Lpl-3J-DpG"/>
-                                    <constraint firstItem="1cG-yS-0tk" firstAttribute="leading" secondItem="OCw-JN-FMw" secondAttribute="leading" constant="8" id="QdP-6I-OVO"/>
-                                    <constraint firstAttribute="bottom" secondItem="xMi-mt-eeL" secondAttribute="bottom" constant="13" id="S48-db-XYD"/>
-                                    <constraint firstItem="BKG-eG-70G" firstAttribute="top" secondItem="OCw-JN-FMw" secondAttribute="top" constant="5" id="Tzp-5q-fIR"/>
-                                    <constraint firstItem="qcI-wu-vY0" firstAttribute="leading" secondItem="xMi-mt-eeL" secondAttribute="trailing" constant="2" id="Vvw-F3-b09"/>
-                                    <constraint firstItem="xMi-mt-eeL" firstAttribute="top" secondItem="OCw-JN-FMw" secondAttribute="top" constant="5" id="oUt-7Y-HHM"/>
-                                    <constraint firstItem="1cG-yS-0tk" firstAttribute="top" secondItem="OCw-JN-FMw" secondAttribute="top" constant="5" id="qB0-Pe-ltS"/>
-                                    <constraint firstItem="xMi-mt-eeL" firstAttribute="leading" secondItem="1cG-yS-0tk" secondAttribute="trailing" constant="1" id="rp4-Be-5HN"/>
-                                    <constraint firstItem="BKG-eG-70G" firstAttribute="leading" secondItem="qcI-wu-vY0" secondAttribute="trailing" constant="2" id="vKf-Tv-CTg"/>
-                                    <constraint firstAttribute="bottom" secondItem="qcI-wu-vY0" secondAttribute="bottom" constant="13" id="w06-B3-cax"/>
+                                    <constraint firstAttribute="bottom" secondItem="vII-CQ-5MG" secondAttribute="bottom" id="Ex2-Yn-aga"/>
+                                    <constraint firstItem="vII-CQ-5MG" firstAttribute="top" secondItem="OCw-JN-FMw" secondAttribute="top" id="bPq-vv-AFg"/>
                                     <constraint firstAttribute="height" constant="54" id="wJ0-fd-ezw"/>
-                                    <constraint firstAttribute="bottom" secondItem="P0R-La-qZ3" secondAttribute="bottom" constant="13" id="zBc-5B-ePJ"/>
-                                    <constraint firstItem="qcI-wu-vY0" firstAttribute="top" secondItem="OCw-JN-FMw" secondAttribute="top" constant="5" id="zpz-ld-1Ro"/>
+                                    <constraint firstItem="vII-CQ-5MG" firstAttribute="leading" secondItem="OCw-JN-FMw" secondAttribute="leading" id="zkI-1R-RzZ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -281,13 +251,9 @@
                         <outlet property="overViewLabel" destination="lBC-wo-u05" id="b9m-US-smP"/>
                         <outlet property="pageControl" destination="mWC-Rz-ukX" id="0S3-VI-VlI"/>
                         <outlet property="pageControlView" destination="02V-Wj-7LR" id="QVV-Mw-9aG"/>
-                        <outlet property="rating1" destination="1cG-yS-0tk" id="9pS-m1-V6s"/>
-                        <outlet property="rating2" destination="xMi-mt-eeL" id="4Mc-ib-IxL"/>
-                        <outlet property="rating3" destination="qcI-wu-vY0" id="ya8-XG-Mu4"/>
-                        <outlet property="rating4" destination="BKG-eG-70G" id="Th6-XP-c9X"/>
-                        <outlet property="rating5" destination="P0R-La-qZ3" id="Whx-KZ-NWV"/>
                         <outlet property="ratingView" destination="OCw-JN-FMw" id="hm1-hq-e3J"/>
                         <outlet property="scrollView" destination="UqN-hX-wYg" id="mKk-04-8ZR"/>
+                        <outlet property="starSet" destination="vII-CQ-5MG" id="bYW-4I-Ig7"/>
                         <outlet property="titalLabel" destination="VJK-AB-ac5" id="AwS-Rd-DUZ"/>
                         <outlet property="titleView" destination="FNp-cZ-a3q" id="eTb-E2-7za"/>
                     </connections>
@@ -317,6 +283,5 @@
     </scenes>
     <resources>
         <image name="icons8-Forward-50" width="50" height="50"/>
-        <image name="unrating" width="50" height="50"/>
     </resources>
 </document>

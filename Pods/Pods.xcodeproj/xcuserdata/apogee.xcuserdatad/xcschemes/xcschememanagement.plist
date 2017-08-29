@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HCSStarRatingView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CodeatArtAssignment.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,7 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>45FF4A7AFE5D8E17D01023C53AED87FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B8BACEB9C9E1E552D0D38F0E4C39126A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

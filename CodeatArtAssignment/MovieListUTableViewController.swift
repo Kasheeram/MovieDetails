@@ -42,7 +42,7 @@ class MovieListUTableViewController: UITableViewController {
                 let readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .allowFragments) as! NSDictionary
                 print(readableJSON)
                 let data = readableJSON["results"] as! NSArray
-                print(data.count)
+                print(data)
                 for i in 0..<data.count{
                     let obj = data[i] as! [String:AnyObject]
                     var tempDict:[String:Any] = [:]
@@ -127,7 +127,7 @@ class MovieListUTableViewController: UITableViewController {
         let buttonRow = sender.tag
         let storyBoard = UIStoryboard(name:"Main",bundle:nil)
         let vcOBJ = storyBoard.instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
-        vcOBJ.title = "Movie Details"
+        vcOBJ.title = movieData[buttonRow]["title"] as! String
         vcOBJ.movieID = movieData[buttonRow]["id"] as! NSNumber
         vcOBJ.vote_agerage = movieData[buttonRow]["vote_average"] as! NSNumber
         navigationController?.pushViewController(vcOBJ, animated: true)

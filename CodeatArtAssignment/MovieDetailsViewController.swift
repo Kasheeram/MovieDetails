@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import HCSStarRatingView
 
 class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
@@ -23,6 +24,7 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var overV: UIView!
     @IBOutlet weak var ratingView: UIView!
     @IBOutlet weak var pageControlView: UIView!
+    @IBOutlet weak var starSet: HCSStarRatingView!
     var movieID:NSNumber?
     var imgOne:UIImageView?
     var imgTwo:UIImageView?
@@ -46,6 +48,14 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
         var completeUrlforMovieDetails = baseUrl+(movieID?.stringValue)!+"?api_key=b7cd3340a794e5a2f35e3abb820b497f"
         callAlamo(url:completeUrlforMovieDetails)
         
+        starSet.maximumValue = 5
+        starSet.minimumValue = 1
+        starSet.value = (vote_agerage as! CGFloat) / 2
+        starSet.allowsHalfStars = true
+        starSet.accurateHalfStars = true
+        starSet.tintColor = UIColor.orange
+        
+        
         //---------------------------------------------------------------
         // MARK: Adding the layes to views
         //---------------------------------------------------------------
@@ -55,27 +65,27 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
         setLayerToView(views:ratingView)
         setLayerToView(views:pageControlView)
         
-        if (vote_agerage?.intValue)! >= 10{
-            self.rating1.image = UIImage(named:"rating")
-            self.rating2.image = UIImage(named:"rating")
-            self.rating3.image = UIImage(named:"rating")
-            self.rating4.image = UIImage(named:"rating")
-            self.rating5.image = UIImage(named:"rating")
-        }else if (vote_agerage?.intValue)! >= 8{
-            self.rating1.image = UIImage(named:"rating")
-            self.rating2.image = UIImage(named:"rating")
-            self.rating3.image = UIImage(named:"rating")
-            self.rating4.image = UIImage(named:"rating")
-        }else if (vote_agerage?.intValue)! >= 6{
-            self.rating1.image = UIImage(named:"rating")
-            self.rating2.image = UIImage(named:"rating")
-            self.rating3.image = UIImage(named:"rating")
-        }else if (vote_agerage?.intValue)! >= 4{
-            self.rating1.image = UIImage(named:"rating")
-            self.rating2.image = UIImage(named:"rating")
-        }else {
-            self.rating1.image = UIImage(named:"rating")
-        }
+//        if (vote_agerage?.intValue)! >= 10{
+//            self.rating1.image = UIImage(named:"rating")
+//            self.rating2.image = UIImage(named:"rating")
+//            self.rating3.image = UIImage(named:"rating")
+//            self.rating4.image = UIImage(named:"rating")
+//            self.rating5.image = UIImage(named:"rating")
+//        }else if (vote_agerage?.intValue)! >= 8{
+//            self.rating1.image = UIImage(named:"rating")
+//            self.rating2.image = UIImage(named:"rating")
+//            self.rating3.image = UIImage(named:"rating")
+//            self.rating4.image = UIImage(named:"rating")
+//        }else if (vote_agerage?.intValue)! >= 6{
+//            self.rating1.image = UIImage(named:"rating")
+//            self.rating2.image = UIImage(named:"rating")
+//            self.rating3.image = UIImage(named:"rating")
+//        }else if (vote_agerage?.intValue)! >= 4{
+//            self.rating1.image = UIImage(named:"rating")
+//            self.rating2.image = UIImage(named:"rating")
+//        }else {
+//            self.rating1.image = UIImage(named:"rating")
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,10 +105,19 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
                 let readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .allowFragments) as! NSDictionary
                     print(readableJSON.count)
                     self.titalLabel.text = readableJSON["title"] as! String
-                    self.overViewLabel.text = readableJSON["overview"] as! String
-                    print(self.tempDict)
-                    self.setImages(image:self.imgOne!,imagename:readableJSON["backdrop_path"] as! String)
-                    self.setImages(image:self.imgTwo!,imagename:readableJSON["poster_path"] as! String)
+                if let overview_data = readableJSON["overview"] as? String{
+                    self.overViewLabel.text = overview_data
+                }else{
+                    self.overViewLabel.text = " "
+                }
+                
+                if let backdrop_path = readableJSON["backdrop_path"] as? String{
+                    self.setImages(image:self.imgOne!,imagename:backdrop_path)
+                }
+                if let poster_path = readableJSON["poster_path"] as? String{
+                    self.setImages(image:self.imgTwo!,imagename:poster_path)
+
+                }
                 
             }catch{
                 

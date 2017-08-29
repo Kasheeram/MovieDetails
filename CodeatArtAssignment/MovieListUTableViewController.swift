@@ -50,10 +50,10 @@ class MovieListUTableViewController: UITableViewController {
                     tempDict["popularity"] = obj["popularity"] as! NSNumber
                     tempDict["adult"] = obj["adult"] as! Bool
                     tempDict["overview"] = obj["overview"] as! String
-                    guard let poster_path = obj["poster_path"] as? String else{ return
-                        //tempDict["poster_path"] = (obj["poster_path"] as! String)
+                    if let poster_path = obj["poster_path"] as? String{
+                        tempDict["poster_path"] = poster_path
                     }
-                    tempDict["poster_path"] = obj["poster_path"] as! String
+                    //tempDict["poster_path"] = obj["poster_path"] as! String
                     tempDict["release_date"] = obj["release_date"] as! String
                     self.movieData.append(tempDict as AnyObject)
                     self.tableView.reloadData()
@@ -121,6 +121,7 @@ class MovieListUTableViewController: UITableViewController {
         let buttonRow = sender.tag
         let storyBoard = UIStoryboard(name:"Main",bundle:nil)
         let vcOBJ = storyBoard.instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
+        vcOBJ.title = "Movie Details"
         vcOBJ.movieID = movieData[buttonRow]["id"] as! NSNumber
         vcOBJ.vote_agerage = movieData[buttonRow]["vote_average"] as! NSNumber
         navigationController?.pushViewController(vcOBJ, animated: true)

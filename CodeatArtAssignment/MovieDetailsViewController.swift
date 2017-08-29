@@ -19,6 +19,10 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var titalLabel: UILabel!
     @IBOutlet weak var overViewLabel: UITextView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var titleView: UIView!
+    @IBOutlet weak var overV: UIView!
+    @IBOutlet weak var ratingView: UIView!
+    @IBOutlet weak var pageControlView: UIView!
     var movieID:NSNumber?
     var imgOne:UIImageView?
     var imgTwo:UIImageView?
@@ -30,6 +34,7 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let scrollViewWidth:CGFloat = self.scrollView.frame.width
         let scrollViewHeight:CGFloat = self.scrollView.frame.height
         imgOne = UIImageView(frame: CGRect(x:0, y:0,width:scrollViewWidth, height:scrollViewHeight))
@@ -38,9 +43,14 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
         self.scrollView.delegate = self
         self.pageControl.currentPage = 0
 
-        
         var completeUrlforMovieDetails = baseUrl+(movieID?.stringValue)!+"?api_key=b7cd3340a794e5a2f35e3abb820b497f"
         callAlamo(url:completeUrlforMovieDetails)
+        
+        setLayerToView(views:titleView)
+        setLayerToView(views:overV)
+        setLayerToView(views:ratingView)
+        setLayerToView(views:pageControlView)
+//        setLayerToView(views:scheduleView)
         
         if (vote_agerage?.intValue)! >= 10{
             self.rating1.image = UIImage(named:"rating")
@@ -109,7 +119,7 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
 //
     }
     
-func scrollViewDidEndDecelerating(_ scrollView: UIScrollView){
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView){
         // Test the offset and calculate the current page after scrolling ends
         let pageWidth:CGFloat = scrollView.frame.width
         let currentPage:CGFloat = floor((scrollView.contentOffset.x-pageWidth/2)/pageWidth)+1
@@ -117,7 +127,16 @@ func scrollViewDidEndDecelerating(_ scrollView: UIScrollView){
         self.pageControl.currentPage = Int(currentPage);
         // Change the text accordingly
     
-        }
+    }
+    
+    func setLayerToView(views:UIView){
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.frame = CGRect.init(x: 0, y: views.frame.size.height-width, width: views.frame.size.width, height: width)
+        border.backgroundColor = UIColor.lightGray.cgColor
+        views.layer.addSublayer(border)
+    }
+
     
 
 

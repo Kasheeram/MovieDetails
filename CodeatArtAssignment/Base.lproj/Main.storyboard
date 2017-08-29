@@ -137,7 +137,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02V-Wj-7LR">
                                 <rect key="frame" x="0.0" y="297" width="375" height="47"/>
                                 <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="mWC-Rz-ukX">
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="mWC-Rz-ukX">
                                         <rect key="frame" x="168" y="5" width="39" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="Qwj-Gp-yeQ"/>

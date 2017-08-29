@@ -46,11 +46,14 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
         var completeUrlforMovieDetails = baseUrl+(movieID?.stringValue)!+"?api_key=b7cd3340a794e5a2f35e3abb820b497f"
         callAlamo(url:completeUrlforMovieDetails)
         
+        //---------------------------------------------------------------
+        // MARK: Adding the layes to views
+        //---------------------------------------------------------------
+        
         setLayerToView(views:titleView)
         setLayerToView(views:overV)
         setLayerToView(views:ratingView)
         setLayerToView(views:pageControlView)
-//        setLayerToView(views:scheduleView)
         
         if (vote_agerage?.intValue)! >= 10{
             self.rating1.image = UIImage(named:"rating")
@@ -80,6 +83,10 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //---------------------------------------------------------------------
+    // MARK: Fetching the Movies details by passing movie id
+    //---------------------------------------------------------------------
+    
     func callAlamo(url:String)
     {
         Alamofire.request(url).responseJSON(completionHandler: { response in
@@ -100,6 +107,9 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
         })
     }
 
+    //---------------------------------------------------------------
+    // MARK: Fetching the images from server and loading in scrollview
+    //---------------------------------------------------------------
     
     func setImages(image:UIImageView,imagename:String){
         URLSession.shared.dataTask(with: NSURL(string: (baseUrlForImages+imagename))! as URL, completionHandler: { (data, response, error) -> Void in

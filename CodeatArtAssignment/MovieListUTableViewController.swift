@@ -26,7 +26,9 @@ class MovieListUTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //---------------------------------------------------------------
+    // MARK: fetching all the movies from server by using API
+    //---------------------------------------------------------------
     
     func callAlamo(url:String)
     {
@@ -77,7 +79,6 @@ class MovieListUTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return movieData.count
     }
 
@@ -98,6 +99,9 @@ class MovieListUTableViewController: UITableViewController {
             cell.adultLabel.text = "N/A"
         }
         
+        //--------------------------------------------------------------------
+        // MARK: Fetching the images from server and loading in tableview cell
+        //--------------------------------------------------------------------
         URLSession.shared.dataTask(with: NSURL(string: (baseUrlForImages+ImageName!))! as URL, completionHandler: { (data, response, error) -> Void in
             
             if error != nil {

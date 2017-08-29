@@ -111,13 +111,15 @@ class MovieDetailsViewController: UIViewController,UIScrollViewDelegate {
                     self.overViewLabel.text = " "
                 }
                 
-                if let backdrop_path = readableJSON["backdrop_path"] as? String{
-                    self.setImages(image:self.imgOne!,imagename:backdrop_path)
-                }
                 if let poster_path = readableJSON["poster_path"] as? String{
                     self.setImages(image:self.imgTwo!,imagename:poster_path)
-
+                    self.pageControl.numberOfPages = 1
                 }
+                if let backdrop_path = readableJSON["backdrop_path"] as? String{
+                    self.setImages(image:self.imgOne!,imagename:backdrop_path)
+                    self.pageControl.numberOfPages += 1
+                }
+                
                 
             }catch{
                 
